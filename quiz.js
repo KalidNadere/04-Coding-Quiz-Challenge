@@ -64,16 +64,29 @@ function startQuiz() {
   quizContainer.style.display = "block";
 
 // Quiz state to be reset
-currentQuestionsIndex = 0;
+currentQuestionIndex = 0;
 score = 0;
 time = questions.length * 10;
 timerElement.textContent = time;
+
+// Question array to be shuffled
+shuffleQuestions();
 
 // To display first question
 showQuestion();
 
 // To start timer
 startTimer();
+}
+
+// Shuffle questions
+function shuffleQuestions() {
+  for (var i = questions.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = questions[i];
+    questions[i] = questions[j];
+    questions[j] = temp;
+  }
 }
 
 // Start timer function
@@ -104,3 +117,54 @@ function showQuestion() {
     option.addEventListener("click", checkAnswer);
   }
 }
+
+var score = 0;
+var timeLeft = 0;
+
+// Check selected answer
+function checkAnswer(event) {
+  var selectedOption = event.target;
+  var currentQuestion = questions[currentQuestionIndex];
+
+  var options = Array.from(optionsList.children);
+
+  // Disable click events on all options to prevent multiple selections
+  options.forEach(function (option) {
+    option.removeEventListener("click", checkAnswer);
+  });
+
+  var isCorrect = currentQuestion.answer === Array.from(optionsList.children).indexOf(selectedOption);
+
+  if (isCorrect) {
+    score++;
+    selectedOption.classList.add("correct"); // Add 'correct' class for correct answer
+  } else {
+    time -= 10;
+    if (time < 0) {
+      time = 0;
+    }
+    timerElement.textContent = time;
+    selectedOption.classList.add ("wrong"); // Add 'wrong' class for incorrect answer
+  }
+
+  // Display 'Correct!' or 'Wrong!' for the selected answer
+  var answerStatus = document.createElement("p");
+  answerStatus.textContent = isCorrect ? "Correct!" : "Wrong!";
+  answerStatus.classList.add("answer-status");
+  quizContainer.appendChild(answerStatus);
+  
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < questions.length) {
+    setTimeout (function () {
+      answerStatus.remove(); // remove answer status
+      showQuestion(); // display next question
+    }, 1000); // 1 second delay before next question
+  } else {
+      setTimeout(function () {
+        answerStatus.remove(); // remove answer status
+        endQuiz(); // end quiz
+      }, 1000); // 1 second delay before ending quiz
+  }
+}
+
