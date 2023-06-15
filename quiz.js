@@ -92,13 +92,13 @@ function shuffleQuestions() {
 // Start timer function
 function startTimer() {
   timerInterval = setInterval(function () {
+    if (time > 0) {
     time--;
     timerElement.textContent = time;
-
-    if (time <= 0) {
+    } else {
       endQuiz();
     }
-  }, 100000);
+  }, 1000);
 }
 
 // Display current question function
@@ -168,3 +168,25 @@ function checkAnswer(event) {
   }
 }
 
+// To end the quiz
+function endQuiz() {
+  clearInterval(timerInterval);
+  quizContainer.style.display = "none";
+  scoreContainer.style.display = "block";
+   // calculation of score based on time left
+   timeLeft = time;
+   score = timeLeft;
+  
+  finalScoreElement.textContent = "Your final is: " + score;
+
+}
+
+// To update timer
+function updateTimer() {
+  time--;
+  timerElement.textContent = time;
+
+  if (time <= 0) {
+    endQuiz();
+  }
+}

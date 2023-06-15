@@ -1,9 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  box-sizing: border-box;
 }
+
 @keyframes color {
   0%   { background: #33CCCC; }
   20%  { background: #33CC36; }
@@ -16,27 +15,36 @@
 body {
   animation: color 8s infinite linear;
   font-size: larger;
-  /* margin: 100px auto 0; */
   padding: 50px;
   font-style: oblique;
   text-align: center;
 }
 
 #high-score {
-  color: rgb(37, 145, 149);
-  background-color: rgb(150, 17, 17);
-  padding: 0 10px;
+  background-color: rgb(153, 11, 11);
   border-radius: 15px;
-  position: absolute;
-  right: 45%;
-  text-decoration:underline;
+  font-size: 25px;
+  font-weight: bolder;
+  display: flexbox;
+  flex-wrap: wrap;
+  font-family: Georgia;
+  color: aliceblue;
+  width: 500px;
+  margin: 50px auto 0;
+}
+
+#score-list {
+  color: rgb(233, 238, 243);
+  font-size: 25px;
+  position: relative;
+  left: 35%;
+  font-family: cursive;
 }
 
 #clear-scores {
   position: absolute;
   left: 3%;
   font-size: 30px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bolder;
   padding: 0px 10px;
   border-radius: 15px;
@@ -48,11 +56,11 @@ body {
   color: #182d9a;
 }
 
+
 #go-back {
   position: absolute;
   right: 5%;
   font-size: 30px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bolder;
   padding: 0px 10px;
   border-radius: 15px;
@@ -64,3 +72,4 @@ body {
   background-color:  #182d9a;
   color: white;
 }
+
