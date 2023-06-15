@@ -190,3 +190,30 @@ function updateTimer() {
     endQuiz();
   }
 }
+
+// Event listener for start button
+startButton.addEventListener("click", startQuiz);
+
+// Event listener for submit button
+submitButton.addEventListener("click", function () {
+  var initials = initialsInput.value;
+  var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+
+  var quizTaker = {
+    initials: initials,
+    score: score
+  };
+
+  highScores.push(quizTaker);
+
+  localStorage.setItem("highScores", JSON.stringify(highScores));
+
+  // Redirect to page displaying all stored initials and scores
+  window.location.href = "highscores.html";
+
+})
+// Event lister for View high Scores button
+var viewScoresButton = document.getElementById("view-scores-button");
+viewScoresButton.addEventListener("click", function () {
+  window.location.href = "highscores.html";
+});

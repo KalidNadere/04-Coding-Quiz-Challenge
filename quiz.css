@@ -92,30 +92,3 @@ body {
   background-color: rgb(116, 93, 136);
   color: black;
 }
-
-#score-container {
-  font-size: 25px;
-  font-weight: bolder;
-  color: aliceblue;
-  display: flexbox;
-  flex-wrap: wrap;
-  max-width: 600px;
-  width: 500px;
-  margin: 250px auto 0;
-}
-#submit {
-  font-size: 20px;
-  padding: 0px 10px;
-  cursor: pointer;
-  background-color: #6921a9;
-  color: aliceblue;
-}
-#submit:hover {
-background-color: dimgray;
-color: white;
-}
-
-#initials {
-  font-size: 20px;
-  padding: 0px;
-}
