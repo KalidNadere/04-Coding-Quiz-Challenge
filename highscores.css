@@ -18,6 +18,8 @@ body {
   padding: 50px;
   font-style: oblique;
   text-align: center;
+  display: flexbox;
+  flex-wrap: wrap;
 }
 
 #high-score {

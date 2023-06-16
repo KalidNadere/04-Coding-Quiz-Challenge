@@ -44,7 +44,7 @@ body {
   flex-wrap: wrap;
   width: 90%;
   max-width: 600px;
-  margin: 100px auto 0;
+  margin: 130px auto 0;
   border-radius: 20px;
   padding: 10px;
   padding-bottom: 0px;
@@ -105,7 +105,22 @@ body {
   width: 500px;
   margin: 250px auto 0;
 }
+@media (max-width:375px) {
+  #initials {
+    position: absolute;
+    bottom: 40%;
+    right: 10%;
+    width: 110px;
+  }
+}
 
+@media (max-width:375px) {
+#submit {
+  position: absolute;
+  bottom: 40%;
+  right: 70%;
+}
+}
 #submit {
   font-size: 20px;
   padding: 0px 10px;
