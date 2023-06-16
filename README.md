@@ -15,6 +15,7 @@ https://kalidnadere.github.io/Coding-Quiz-Challenge/
 
 ## Deployed site screenshot
 
+![Screenshot](https://github.com/KalidNadere/Coding-Quiz-Challenge/assets/131591052/c2f3cd04-cdec-4a3f-b864-6b080c79bbc0)
 
 
 
