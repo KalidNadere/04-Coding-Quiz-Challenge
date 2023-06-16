@@ -9,6 +9,7 @@ The equirement of this quiz is for the timer to start upon clicking the start bu
 
 ## Deployed website URL
 
+https://kalidnadere.github.io/Coding-Quiz-Challenge/
 
 
 
