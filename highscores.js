@@ -32,12 +32,9 @@ for (var i = 0; i < highScores.length; i++){
   scoreList.appendChild(row);
 }
 
-// Option to insert last score at the top of scoreslist
-//scoreList.insertBefore(row, scoreList.firstChild);
-
 // Event listener for Go Back button
 goBackButton.addEventListener("click", function (){
-  window.location.href = "quiz.html";
+  window.location.href = "index.html";
 });
 
 // Event listener for Clear Scores button

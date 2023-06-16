@@ -4,6 +4,7 @@
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   box-sizing: border-box;
 }
+
 @keyframes color {
   0%   { background: #33CCCC; }
   20%  { background: #33CC36; }
@@ -35,7 +36,6 @@ body {
 }
 
 #options li:hover {
-  /* background-color: rgb(103, 84, 171); */
   background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
 }
 
@@ -58,6 +58,7 @@ body {
   padding: 20px;
   font-size: 20px;
 }
+
 #start-button {
   font-size: 35px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -65,7 +66,7 @@ body {
   margin: 100px auto 0;
   padding: 1px 15px;
   position: absolute;
-  right: 47%;
+  right: 44%;
   border-radius: 15px;
   cursor: pointer;
   color: rgb(52, 63, 190);
@@ -88,11 +89,11 @@ body {
   cursor: pointer;
   opacity: .8;
 }
+
 #view-scores-button:hover {
   background-color: rgb(116, 93, 136);
   color: black;
 }
-
 
 #score-container {
   font-size: 25px;
@@ -104,6 +105,7 @@ body {
   width: 500px;
   margin: 250px auto 0;
 }
+
 #submit {
   font-size: 20px;
   padding: 0px 10px;
@@ -111,6 +113,7 @@ body {
   background-color: #6921a9;
   color: aliceblue;
 }
+
 #submit:hover {
 background-color: dimgray;
 color: white;
