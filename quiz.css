@@ -15,13 +15,14 @@
 }
 
 body {
-  animation: color 8s infinite linear;
+  /* animation: color 8s infinite linear; */
+  background-color: #383c38;
 }
 
 #quiz-container {
   max-width: 600px;
   margin: 30px auto;
-  color: rgb(32, 75, 174);
+  color: rgb(145, 101, 101);
   font-size: 25px;
   padding: 55px;
 }
@@ -50,8 +51,10 @@ body {
   padding-bottom: 0px;
   font-style: oblique;
   text-align: center;
-  color: rgb(9, 10, 10);
+  color: rgb(145, 101, 101);
+  -webkit-background-clip: text;
   background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  
 }
 
 #text {
@@ -69,11 +72,12 @@ body {
   right: 44%;
   border-radius: 15px;
   cursor: pointer;
-  color: rgb(52, 63, 190);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
 }
 #start-button:hover {
-  background-color: rgb(35, 169, 61);
-  color: rgb(89, 24, 98);
+  opacity: 0.7;
 }
 
 #view-scores-button {
@@ -81,8 +85,8 @@ body {
   top: 5%;
   left: 1%;
   font-size: 20px;
-  background-color: rgb(11, 52, 167);
-  color: floralwhite;
+  background-color: rgb(23, 23, 26);
+  color: rgb(62, 222, 234);
   font-family: cursive;
   padding: 5px 15px;
   border-radius: 20px;
@@ -91,8 +95,8 @@ body {
 }
 
 #view-scores-button:hover {
-  background-color: rgb(116, 93, 136);
-  color: black;
+  background-color: rgb(74, 96, 74);
+  color: rgb(110, 209, 220);
 }
 
 #score-container {
@@ -125,13 +129,12 @@ body {
   font-size: 20px;
   padding: 0px 10px;
   cursor: pointer;
-  background-color: #6921a9;
+  background-color: #164d55;
   color: aliceblue;
 }
 
 #submit:hover {
 background-color: dimgray;
-color: white;
 }
 
 #initials {
